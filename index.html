@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Movimiento Fitra</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+    <!-- Fondo animado -->
+    <div class="bg-anim" aria-hidden="true"></div>
+
+    <!-- PORTADA -->
+    <div id="portada">
+        <video autoplay muted loop playsinline>
+            <source src="assets/video/portada.mp4" type="video/mp4" />
+            Tu navegador no soporta video.
+        </video>
+
+        <div class="portada__overlay"></div>
+
+        <div class="portada__content">
+            <h1>MOVIMIENTO FITRA</h1>
+            <p>Cuerpo • Energía • Presencia</p>
+            <button id="btnIngresar" type="button">Ingresar</button>
+        </div>
+
+        <div class="portada__hint">  Bienestar integral</div>
+    </div>
+
+    <!-- CONTENIDO -->
+    <div id="contenido">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+            <div class="wrap topbar__inner">
+                <div class="brand">
+                    <span class="brand__dot"></span>
+                    <span class="brand__name">Movimiento Fitra</span>
+                </div>
+
+                <button class="menuBtn" id="menuBtn" type="button" aria-label="Abrir menú">☰</button>
+
+                <nav class="nav" id="nav">
+                    <a href="#inicio" class="nav__link active" data-section="inicio">Inicio</a>
+                    <a href="#quien-soy" class="nav__link" data-section="quien-soy">Quién soy</a>
+                    <a href="#terapias" class="nav__link" data-section="terapias">Terapias</a>
+                    <a href="#fitness" class="nav__link" data-section="fitness">Fitness</a>
+                    <a href="#nutricion" class="nav__link" data-section="nutricion">Nutrición</a>
+                    <a href="#planes-fitra" class="nav__link" data-section="planes-fitra">Planes</a>
+                    <a href="#agenda" class="nav__link" data-section="agenda">Agenda</a>
+                    <a href="#contacto" class="nav__link" data-section="contacto">Contacto</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="wrap">
+
+            <!-- HERO -->
+            <section class="hero seccion animar" id="inicio">
+                <div class="hero__text">
+                    <span class="pill">Bienestar integral</span>
+                    <h2>Un camino completo para tu equilibrio: cuerpo, mente y energía.</h2>
+                    <p>
+                        Entrenamiento consciente + terapias holísticas + nutrición con enfoque realista.
+                        Diseñado para acompañarte de forma personalizada.
+                    </p>
+
+                    <div class="hero__cta">
+                        <a class="btn primary" href="#agenda">Reservar turno</a>
+                        <a class="btn ghost" href="#terapias">Ver terapias</a>
+                    </div>
+
+                    <div class="hero__stats">
+                        <div class="stat">
+                            <div class="stat__num">3</div>
+                            <div class="stat__label">Áreas integradas</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__num">1:1</div>
+                            <div class="stat__label">Acompañamiento</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__num">360°</div>
+                            <div class="stat__label">Bienestar</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero__media">
+                    <div class="mediaCard">
+                        <img src="assets/Imagenes/Logo.jpeg" alt="Bienestar" />
+                        <div class="mediaCard__label">Presencia • Energía • Movimiento</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- QUIÉN SOY -->
+            <section class="about seccion animar" id="quien-soy">
+                <div class="about__wrap sectionCard">
+                    <div class="about__img">
+                        <img src="assets/Imagenes/soy.jfif" alt="Iari Lizzi - Movimiento Fitra">
+                    </div>
+
+                    <div class="about__text">
+                        <h3>¿Quién soy?</h3>
+                        <span class="about__name">IARI LIZZI</span>
+
+                        <p>Soy terapeuta holística, personal trainer y estudiante de nutrición.</p>
+
+                        <p>
+                            Después de años de explorar el bienestar desde distintos caminos,
+                            entendí algo profundo:
+                            <strong>no somos solo cuerpo, ni solo mente. Somos todo a la vez.</strong>
+                        </p>
+
+                        <p>
+                            No siempre estuve conectada conmigo. Me llevó tiempo comprender que el verdadero bienestar
+                            <strong>no es una meta, sino un camino</strong>.
+                        </p>
+
+                        <p class="about__highlight">
+                            Desde ese proceso personal nace <strong>Movimiento FITRA</strong>:
+                            un espacio para acompañarte a reconectar con tu cuerpo, tu energía y tu presencia.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TERAPIAS -->
+            <section class="sectionCard seccion animar" id="terapias">
+                <div class="sectionCard__head">
+                    <h3>Terapias holísticas</h3>
+                    <p>Elegí una herramienta o combinemos varias según tu proceso.</p>
+                </div>
+
+                <div class="sub-tabs">
+                    <button type="button" class="sub-tab-btn active" data-subtab="reiki">Reiki</button>
+                    <button type="button" class="sub-tab-btn" data-subtab="registros">Registros Akáshicos</button>
+                    <button type="button" class="sub-tab-btn" data-subtab="meditacion">Meditación</button>
+                    <button type="button" class="sub-tab-btn" data-subtab="flores">Flores de Bach</button>
+                    <button type="button" class="sub-tab-btn" data-subtab="mandalas">Mándalas terapéuticos</button>
+                    <button type="button" class="sub-tab-btn" data-subtab="talleres">Talleres y Cursos</button>
+                </div>
+
+                <div class="sub-tab-wrap">
+
+                    <!-- ===================== REIKI ===================== -->
+                    <article id="reiki" class="sub-tab-content active">
+                        <div class="subGrid">
+
+                            <div class="photoFrame poster">
+                                <img class="posterBg" src="assets/Imagenes/reiki.jfif" alt="">
+                                <div class="posterMain">
+                                    <img src="assets/Imagenes/reiki.jfif" alt="Sesión de Reiki">
+                                </div>
+                                <span class="posterLine top"></span>
+                                <span class="posterLine bottom"></span>
+                            </div>
+
+                            <div class="reikiText">
+                                <h4>Reiki</h4>
+
+                                <p class="lead">
+                                    Reiki es una palabra japonesa que significa <strong>energía vital
+                                        universal</strong>.
+                                    Rei (Universal) – Ki (Fuerza vital o energía vital personal).
+                                </p>
+
+                                <p>
+                                    El tratamiento actúa alineando el <strong>Ki de la persona con la energía del
+                                        universo</strong>.
+                                    Este alineamiento se produce a nivel físico, emocional, mental y espiritual,
+                                    brindando una transformación
+                                    integral.
+                                </p>
+
+                                <blockquote>
+                                    “Quien ha alcanzado la plena comprensión de su verdadero ser ya no se verá
+                                    perturbado por influencias
+                                    que le distraigan, tanto en su interior como a su alrededor.”
+                                </blockquote>
+
+                                <div class="reikiDivider"></div>
+
+                                <div class="detailsStack">
+                                    <details class="sessionAcc">
+                                        <summary>🪷 Reiki presencial <span>⏳ 1 hora</span></summary>
+                                        <div class="sessionAcc__body">
+                                            <p>
+                                                Comenzamos con una pequeña charla, y luego realizamos una meditación
+                                                guiada para conectar
+                                                con la respiración consciente, bajar el ritmo cardíaco y relajarnos.
+                                            </p>
+                                            <p>
+                                                Te recostás en la camilla mientras permanecés en estado meditativo. Mido
+                                                los chakras con el péndulo,
+                                                realizamos Reiki y finalizamos con un mensajito del oráculo.
+                                            </p>
+                                        </div>
+                                    </details>
+
+                                    <details class="sessionAcc">
+                                        <summary>🪷 Reiki a distancia <span>🌙 Google Meet</span></summary>
+                                        <div class="sessionAcc__body">
+                                            <p>
+                                                La sesión se realiza de forma virtual. Comenzamos con una meditación
+                                                guiada para conectar con la
+                                                respiración
+                                                consciente y bajar el ritmo.
+                                            </p>
+                                            <p>
+                                                Luego te recostás en cama o sillón mientras permanecés en estado
+                                                meditativo. Mido chakras con péndulo,
+                                                realizo Reiki y finalizamos con oráculo.
+                                            </p>
+                                        </div>
+                                    </details>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ===================== REGISTROS ===================== -->
+                    <article id="registros" class="sub-tab-content">
+                        <div class="subGrid">
+
+                            <div class="photoFrame poster">
+                                <img class="posterBg" src="assets/Imagenes/Registros.jfif" alt="">
+                                <div class="posterMain">
+                                    <img src="assets/Imagenes/Registros.jfif" alt="Registros Akáshicos">
+                                </div>
+                                <span class="posterLine top"></span>
+                                <span class="posterLine bottom"></span>
+                            </div>
+
+                            <div class="reikiText">
+                                <h4>Registros Akáshicos</h4>
+
+                                <p class="lead">
+                                    Mediante su apertura podemos encontrar cuestiones para modificar, sanar o
+                                    fortalecer:
+                                    algunas pueden estar en nosotros desde vidas anteriores (karmas) y, por otro lado,
+                                    conocer los dones con los que contamos en esta vida (dharmas).
+                                </p>
+
+                                <p>
+                                    También podemos comprender aquellas situaciones o cosas a las que hoy no les
+                                    encontramos respuesta o sentido.
+                                    Al acceder a la información del akasha (alma), nos conectamos con lo más elevado y
+                                    profundo para obtener una
+                                    visión
+                                    mucho más amplia.
+                                </p>
+
+                                <p>
+                                    Gracias a esta comprensión, se logra armonizar todos los planos:
+                                    <strong>emocional, mental y físico</strong>.
+                                </p>
+
+                                <blockquote>
+                                    “Cuando accedemos a la información del alma, miramos nuestra vida con más claridad,
+                                    comprensión y sentido.”
+                                </blockquote>
+
+                                <div class="reikiDivider"></div>
+
+                                <div class="detailsStack">
+                                    <details class="sessionAcc">
+                                        <summary>❤️ Sesión 100% a distancia <span>PDF + oráculo</span></summary>
+                                        <div class="sessionAcc__body">
+                                            <p>El día que acordemos me enviás las preguntas (hasta 10).</p>
+                                            <p>
+                                                Te envío una meditación grabada para que la realices mientras abro los
+                                                registros.
+                                                Te aviso cuando los abro, cuando estoy por cerrarlos y cuando los
+                                                cierro.
+                                                También te envío una frase para repetir antes del cierre.
+                                            </p>
+                                            <p>
+                                                Luego paso todo en limpio y te envío el PDF por mail. Finalizo con un
+                                                mensajito del oráculo y,
+                                                si surge algo puntual, te envío meditaciones, afirmaciones y tips.
+                                            </p>
+                                        </div>
+                                    </details>
+
+                                    <details class="sessionAcc">
+                                        <summary>♥️ Sesión por Google Meet <span>en vivo</span></summary>
+                                        <div class="sessionAcc__body">
+                                            <p>
+                                                Nos conectamos por Meet. Empezamos con una meditación para relajar.
+                                                Luego abrimos registros: recibís un mensaje de bienvenida y podés
+                                                preguntar lo que desees.
+                                            </p>
+                                            <p>
+                                                Al finalizar, paso todo en limpio y envío el PDF por mail. Si querés,
+                                                también podés retirar los
+                                                registros
+                                                físicos por mi domicilio. Cierro con oráculo y tips si aparece algo
+                                                puntual.
+                                            </p>
+                                        </div>
+                                    </details>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ===================== MEDITACIÓN ===================== -->
+                    <article id="meditacion" class="sub-tab-content">
+                        <div class="subGrid">
+
+                            <div class="photoFrame poster">
+                                <img class="posterBg" src="assets/Imagenes/Meditacion.png" alt="">
+                                <div class="posterMain">
+                                    <img src="assets/Imagenes/Meditacion.png" alt="Meditación guiada">
+                                </div>
+                                <span class="posterLine top"></span>
+                                <span class="posterLine bottom"></span>
+                            </div>
+
+                            <div class="reikiText">
+                                <h4>Meditación</h4>
+
+                                <p class="lead">
+                                    La meditación es una práctica de presencia que te ayuda a volver a tu centro:
+                                    observar tu mente sin juicio, conectar con tu respiración y habitar tu cuerpo.
+                                </p>
+
+                                <p>
+                                    En un mundo con estímulos constantes, meditar es un espacio de pausa.
+                                    Con constancia, puede ayudarte a <strong>reducir estrés</strong>,
+                                    <strong>calmar pensamientos repetitivos</strong>, mejorar tu enfoque
+                                    y fortalecer tu equilibrio emocional.
+                                </p>
+
+                                <p>
+                                    No se trata de “dejar la mente en blanco”, sino de entrenar la atención
+                                    para responder con más calma y claridad en tu día a día.
+                                </p>
+
+                                <blockquote>
+                                    “Cuando respirás consciente, todo vuelve a su lugar: el cuerpo se afloja,
+                                    la mente se aquieta y la energía se ordena.”
+                                </blockquote>
+
+                                <div class="reikiDivider"></div>
+
+                                <div class="detailsStack">
+                                    <details class="sessionAcc">
+                                        <summary>🧘‍♀️ Meditación guiada (1:1) <span>45–60 min</span></summary>
+                                        <div class="sessionAcc__body">
+                                            <p>
+                                                Breve charla para saber cómo estás hoy (ansiedad, estrés, insomnio,
+                                                calma, enfoque, etc.).
+                                                Luego una meditación guiada con respiración y relajación.
+                                            </p>
+                                            <p>
+                                                Finalizamos con un cierre suave y una herramienta práctica para
+                                                sostenerlo en casa
+                                                (audio, respiración, afirmación o rutina breve).
+                                            </p>
+                                        </div>
+                                    </details>
+
+                                    <details class="sessionAcc">
+                                        <summary>🌙 Meditación para ansiedad / descanso <span>30–45 min</span></summary>
+                                        <div class="sessionAcc__body">
+                                            <p>
+                                                Práctica para momentos de saturación mental o para preparar el sueño.
+                                                Respiración, escaneo corporal y visualización.
+                                            </p>
+                                        </div>
+                                    </details>
+
+                                    <details class="sessionAcc">
+                                        <summary>✨ Meditación + intención <span>energética</span></summary>
+                                        <div class="sessionAcc__body">
+                                            <p>
+                                                Sesión profunda para conectar con tu energía e intención.
+                                                Incluye anclaje y visualización para ordenar emociones y reenfocar tu
+                                                camino.
+                                            </p>
+                                        </div>
+                                    </details>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ===================== FLORES ===================== -->
+                    <article id="flores" class="sub-tab-content">
+                        <div class="subGrid">
+
+                            <div class="photoFrame poster">
+                                <img class="posterBg" src="assets/Imagenes/Flores.jfif" alt="">
+                                <div class="posterMain">
+                                    <img src="assets/Imagenes/Flores.jfif" alt="Flores de Bach">
+                                </div>
+                                <span class="posterLine top"></span>
+                                <span class="posterLine bottom"></span>
+                            </div>
+
+                            <div class="reikiText">
+                                <h4>Flores de Bach</h4>
+
+                                <p class="lead">
+                                    Las Flores de Bach son un sistema de esencias florales creado por el médico
+                                    homeópata
+                                    <strong>Edward Bach</strong> (1930), luego de una larga investigación.
+                                </p>
+
+                                <p>
+                                    Para Bach, muchas enfermedades aparecen como consecuencia de trastornos emocionales
+                                    y mentales,
+                                    producto de un conflicto entre el <strong>alma</strong> y la
+                                    <strong>personalidad</strong>.
+                                </p>
+
+                                <blockquote>
+                                    “Cuando armonizamos lo emocional, la vida se vuelve más liviana: recuperamos
+                                    claridad y calma.”
+                                </blockquote>
+
+                                <div class="reikiDivider"></div>
+
+                                <div class="detailsStack">
+                                    <details class="sessionAcc">
+                                        <summary>🌸 ¿Qué trabajamos con Flores de Bach? <span>38 esencias</span>
+                                        </summary>
+                                        <div class="sessionAcc__body">
+                                            <ul class="check">
+                                                <li><strong>Conocer</strong> emociones (miedo, ansiedad, culpa,
+                                                    inseguridad).</li>
+                                                <li><strong>Sanarlas</strong> con desbloqueo energético.</li>
+                                                <li><strong>Transformar</strong> la emoción en luz.</li>
+                                            </ul>
+                                        </div>
+                                    </details>
+
+                                    <details class="sessionAcc">
+                                        <summary>❤️ Sesión / acompañamiento <span>45–60 min</span></summary>
+                                        <div class="sessionAcc__body">
+                                            <p>
+                                                Identificamos qué emoción te pesa hoy y armamos una combinación
+                                                personalizada.
+                                                Si querés, sumamos una práctica breve (respiración / meditación /
+                                                afirmación).
+                                            </p>
+                                        </div>
+                                    </details>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ===================== MÁNDALAS ===================== -->
+                    <article id="mandalas" class="sub-tab-content">
+                        <div class="subGrid">
+
+                            <div class="photoFrame poster">
+                                <img class="posterBg" src="assets/Imagenes/Mandalas.png" alt="">
+                                <div class="posterMain">
+                                    <img src="assets/Imagenes/Mandalas.png" alt="Mándalas terapéuticos">
+                                </div>
+                                <span class="posterLine top"></span>
+                                <span class="posterLine bottom"></span>
+                            </div>
+
+                            <div class="reikiText">
+                                <h4>Mándalas terapéuticos</h4>
+
+                                <p class="lead">
+                                    Los mándalas son una herramienta simbólica y creativa que nos invita a
+                                    <strong>volver al centro</strong>. A través del color, las formas y la repetición,
+                                    se produce un estado de calma que ayuda a ordenar emociones y aquietar la mente.
+                                </p>
+
+                                <p>
+                                    Trabajar con mándalas no se trata de “dibujar lindo”, sino de habilitar un espacio
+                                    de introspección:
+                                    lo que elegís, cómo lo pintás y cómo te sentís durante el proceso puede convertirse
+                                    en información valiosa.
+                                </p>
+
+                                <blockquote>
+                                    “Cuando creás en calma, tu energía se ordena. El centro aparece solo.”
+                                </blockquote>
+
+                                <div class="reikiDivider"></div>
+
+                                <div class="detailsStack">
+                                    <details class="sessionAcc">
+                                        <summary>🎨 ¿Qué trabajamos con mándalas? <span>calma + enfoque</span></summary>
+                                        <div class="sessionAcc__body">
+                                            <ul class="check">
+                                                <li><strong>Relajación</strong> y regulación emocional.</li>
+                                                <li><strong>Presencia</strong>: aquí y ahora.</li>
+                                                <li><strong>Autoconocimiento</strong> a través del color.</li>
+                                                <li><strong>Orden mental</strong>: bajar pensamientos repetitivos.</li>
+                                            </ul>
+                                        </div>
+                                    </details>
+
+                                    <details class="sessionAcc">
+                                        <summary>✨ Sesión / práctica guiada <span>45–60 min</span></summary>
+                                        <div class="sessionAcc__body">
+                                            <p>
+                                                Meditación breve para entrar en presencia y luego un mándala guiado
+                                                (colores, intención y acompañamiento).
+                                                Cierre con reflexión suave y herramienta simple para casa.
+                                            </p>
+                                        </div>
+                                    </details>
+
+                                    <details class="sessionAcc">
+                                        <summary>👥 Taller grupal <span>grupos reducidos</span></summary>
+                                        <div class="sessionAcc__body">
+                                            <p>
+                                                Experiencia compartida para crear y relajar. Puede incluir música suave
+                                                y una intención del día.
+                                            </p>
+                                        </div>
+                                    </details>
+                                </div>
+
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ===================== TALLERES ===================== -->
+                    <article id="talleres" class="sub-tab-content">
+                        <div class="subGrid">
+
+                            <div class="photoFrame poster">
+                                <img class="posterBg" src="assets/Imagenes/Tallesres.png" alt="">
+                                <div class="posterMain">
+                                    <img src="assets/Imagenes/Tallesres.png" alt="Talleres y Cursos">
+                                </div>
+                                <span class="posterLine top"></span>
+                                <span class="posterLine bottom"></span>
+                            </div>
+
+                            <div class="reikiText">
+                                <h4>Talleres y Cursos</h4>
+                                <p class="lead">Espacios de aprendizaje para crecimiento personal y bienestar integral.
+                                </p>
+
+                                <div class="reikiDivider"></div>
+
+                                <div class="detailsStack">
+
+                                    <details class="sessionAcc">
+                                        <summary>🌸 Terapeuta floral Bach <span>100% a distancia</span></summary>
+                                        <div class="sessionAcc__body">
+                                            <p>
+                                                Formación/acompañamiento enfocado en el sistema floral del Dr. Bach:
+                                                comprensión emocional,
+                                                selección de esencias y aplicación según tu proceso.
+                                            </p>
+                                        </div>
+                                    </details>
+
+                                    <details class="sessionAcc">
+                                        <summary>🪷 Iniciación en Reiki Usui Nivel I <span>formación</span></summary>
+                                        <div class="sessionAcc__body">
+                                            <p>
+                                                Introducción al Reiki Usui: bases, energía, autopráctica y herramientas
+                                                iniciales.
+                                                Ideal para empezar tu camino con Reiki.
+                                            </p>
+                                        </div>
+                                    </details>
+
+                                    <details class="sessionAcc">
+                                        <summary>🪷 Iniciación en Reiki Usui Nivel II <span>profundización</span>
+                                        </summary>
+                                        <div class="sessionAcc__body">
+                                            <p>
+                                                Profundizamos la práctica: expansión de herramientas, integración y
+                                                acompañamiento
+                                                para sostener el proceso con mayor claridad y presencia.
+                                            </p>
+                                        </div>
+                                    </details>
+
+                                    <details class="sessionAcc">
+                                        <summary>🧘‍♀️ Armonización de Chakras <span>meditación</span></summary>
+                                        <div class="sessionAcc__body">
+                                            <p>
+                                                Práctica guiada para alinear y equilibrar tu energía. Trabajamos con
+                                                respiración,
+                                                enfoque consciente y visualización para ordenar el sistema energético.
+                                            </p>
+                                        </div>
+                                    </details>
+
+                                    <details class="sessionAcc">
+                                        <summary>🌙 Sanación linaje femenino <span>proceso</span></summary>
+                                        <div class="sessionAcc__body">
+                                            <p>
+                                                Un espacio de exploración y sanación: creencias, patrones, emociones y
+                                                memorias del linaje.
+                                                Enfoque amoroso, profundo y respetuoso.
+                                            </p>
+                                        </div>
+                                    </details>
+
+                                    <details class="sessionAcc">
+                                        <summary>🔥 Sanación linaje masculino <span>proceso</span></summary>
+                                        <div class="sessionAcc__body">
+                                            <p>
+                                                Trabajo de sanación enfocado en patrones heredados del linaje masculino:
+                                                vínculos,
+                                                sostén, límites, fuerza interna y reconciliación emocional.
+                                            </p>
+                                        </div>
+                                    </details>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- FITNESS -->
+            
+<!-- FITNESS -->
+<section class="sectionCard seccion animar" id="fitness">
+  <div class="sectionCard__head">
+    <h3>Fitness</h3>
+    <p>Entrenamiento consciente, adaptado a tu objetivo y a tu vida real.</p>
+  </div>
+
+  <!-- BOTONES -->
+  <div class="fit-tabs">
+    <button type="button" class="fit-tab-btn active" data-fit="fit-planes">Planes</button>
+    <button type="button" class="fit-tab-btn" data-fit="fit-uno">Acompañamiento 1:1</button>
+    <button type="button" class="fit-tab-btn" data-fit="fit-material">Material visual</button>
+    <button type="button" class="fit-tab-btn" data-fit="fit-clases">Clases</button>
+  </div>
+
+  <div class="fit-wrap">
+
+    <!-- TAB 1 -->
+    <article id="fit-planes" class="fit-tab-content active">
+      <div class="subGrid">
+
+        <div class="photoFrame poster">
+          <img class="posterBg" src="assets/Imagenes/Entrenamiento.png" alt="" aria-hidden="true">
+          <div class="posterMain">
+            <img src="assets/Imagenes/Entrenamiento.png" alt="Planes de entrenamiento personalizados">
+          </div>
+          <span class="posterLine top"></span>
+          <span class="posterLine bottom"></span>
+        </div>
+
+        <div class="reikiText">
+          <h4>Planes de entrenamiento personalizados</h4>
+
+          <p class="lead">
+            Rutinas creadas según tu nivel, tu disponibilidad y tu objetivo:
+            <strong>fuerza, movilidad, resistencia o bienestar general</strong>.
+          </p>
+
+          <p>
+            La idea es que el entrenamiento se adapte a vos (y no al revés),
+            con progresiones reales y sostenibles.
+          </p>
+
+          <blockquote>
+            “Constancia + presencia: el cambio aparece solo.”
+          </blockquote>
+
+          <div class="reikiDivider"></div>
+
+          <div class="detailsStack">
+            <details class="sessionAcc">
+              <summary>✅ ¿Qué incluye? <span>plan + guía</span></summary>
+              <div class="sessionAcc__body">
+                <p>Plan armado a medida + estructura semanal clara.</p>
+                <p>Adaptación por tiempo disponible y elementos que tengas.</p>
+                <p>Progresiones para que avances sin frustrarte.</p>
+              </div>
+            </details>
+
+            <details class="sessionAcc">
+              <summary>🎯 Objetivos <span>según vos</span></summary>
+              <div class="sessionAcc__body">
+                <p>Tonificación • fuerza • energía • postura • movilidad.</p>
+                <p>O simplemente empezar y sentirte mejor en tu cuerpo.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- TAB 2 -->
+    <article id="fit-uno" class="fit-tab-content">
+      <div class="subGrid">
+
+        <div class="photoFrame poster">
+          <img class="posterBg" src="assets/Imagenes/Acompañamiento.png" alt="" aria-hidden="true">
+          <div class="posterMain">
+            <img src="assets/Imagenes/Acompañamiento.png" alt="Acompañamiento 1:1">
+          </div>
+          <span class="posterLine top"></span>
+          <span class="posterLine bottom"></span>
+        </div>
+
+        <div class="reikiText">
+          <h4>Acompañamiento 1:1</h4>
+
+          <p class="lead">
+            Si te cuesta sostener la constancia o necesitás guía cercana,
+            el 1:1 te acompaña para que <strong>no abandones</strong>.
+          </p>
+
+          <p>
+            Ajustamos el plan, revisamos avances, ordenamos hábitos y buscamos
+            una estructura que te funcione en tu vida real.
+          </p>
+
+          <blockquote>
+            “Acompañar también es motivar con calma.”
+          </blockquote>
+
+          <div class="reikiDivider"></div>
+
+          <div class="detailsStack">
+            <details class="sessionAcc">
+              <summary>📌 Seguimiento <span>orden y sostén</span></summary>
+              <div class="sessionAcc__body">
+                <p>Revisión de progreso + ajustes según energía, semana y tiempos.</p>
+                <p>Enfoque realista: sin extremos ni exigencias imposibles.</p>
+              </div>
+            </details>
+
+            <details class="sessionAcc">
+              <summary>🤍 Para quién es <span>ideal</span></summary>
+              <div class="sessionAcc__body">
+                <p>Si arrancás y frenás, si te perdés, o si necesitás una guía firme pero amorosa.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- TAB 3 -->
+    <article id="fit-material" class="fit-tab-content">
+      <div class="subGrid">
+
+        <div class="photoFrame poster">
+          <img class="posterBg" src="assets/Imagenes/Material.png" alt="" aria-hidden="true">
+          <div class="posterMain">
+            <img src="assets/Imagenes/Material.png" alt="Material visual">
+          </div>
+          <span class="posterLine top"></span>
+          <span class="posterLine bottom"></span>
+        </div>
+
+        <div class="reikiText">
+          <h4>Material visual</h4>
+
+          <p class="lead">
+            Para que entrenes con más seguridad: referencias simples,
+            explicaciones claras y guía práctica.
+          </p>
+
+          <p>
+            La idea es que sepas <strong>cómo hacer cada ejercicio</strong>,
+            cómo respirar, y qué evitar para no lesionarte.
+          </p>
+
+          <blockquote>
+            “Cuando entendés lo que hacés, entrenar se vuelve fácil.”
+          </blockquote>
+
+          <div class="reikiDivider"></div>
+
+          <div class="detailsStack">
+            <details class="sessionAcc">
+              <summary>🎥 Formato <span>práctico</span></summary>
+              <div class="sessionAcc__body">
+                <p>Videos / ejemplos / tips de técnica según el plan.</p>
+                <p>Ideal si entrenás sola/o y querés hacerlo bien.</p>
+              </div>
+            </details>
+
+            <details class="sessionAcc">
+              <summary>🧠 Objetivo <span>claridad</span></summary>
+              <div class="sessionAcc__body">
+                <p>Que entrenes sin dudas, con confianza y buena ejecución.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- TAB 4 -->
+    <article id="fit-clases" class="fit-tab-content">
+      <div class="subGrid">
+
+        <div class="photoFrame poster">
+          <img class="posterBg" src="assets/Imagenes/Clases.png" alt="" aria-hidden="true">
+          <div class="posterMain">
+            <img src="assets/Imagenes/Clases.png" alt="Clases virtuales / presenciales">
+          </div>
+          <span class="posterLine top"></span>
+          <span class="posterLine bottom"></span>
+        </div>
+
+        <div class="reikiText">
+          <h4>Clases virtuales / presenciales</h4>
+
+          <p class="lead">
+            Clases individuales o grupos reducidos.
+            <strong>Próximamente</strong>.
+          </p>
+
+          <p>
+            Un espacio para entrenar acompañada/o, sostener motivación y compartir energía.
+          </p>
+
+          <blockquote>
+            “Moverse en grupo también eleva el ánimo.”
+          </blockquote>
+
+          <div class="reikiDivider"></div>
+
+          <div class="detailsStack">
+            <details class="sessionAcc">
+              <summary>👥 Modalidad <span>próximamente</span></summary>
+              <div class="sessionAcc__body">
+                <p>Virtual / presencial • individual / grupos reducidos.</p>
+              </div>
+            </details>
+
+            <details class="sessionAcc">
+              <summary>🔔 Avisos <span>cupos</span></summary>
+              <div class="sessionAcc__body">
+                <p>Podés dejar tu interés en Agenda para avisarte cuando se abran cupos.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+  </div>
+</section>
+
+    <!-- NUTRICIÓN -->
+ 
+<!-- NUTRICIÓN -->
+<section class="sectionCard seccion animar" id="nutricion">
+  <div class="sectionCard__head">
+    <h3>Nutrición</h3>
+    <p>Guías prácticas para comer mejor sin extremos, con enfoque realista.</p>
+  </div>
+
+  <!-- TABS NUTRI -->
+  <div class="nutri-tabs">
+    <button type="button" class="nutri-tab-btn active" data-nutri="nutri-plan">Plan de alimentación saludable</button>
+    <button type="button" class="nutri-tab-btn" data-nutri="nutri-uno">Acompañamiento 1:1</button>
+  </div>
+
+  <div class="nutri-wrap">
+
+    <!-- TAB 1 -->
+    <article id="nutri-plan" class="nutri-tab-content active">
+      <div class="subGrid">
+
+        <div class="photoFrame poster">
+          <img class="posterBg" src="assets/Imagenes/Alimentacion.png" alt="" aria-hidden="true">
+          <div class="posterMain">
+            <img src="assets/Imagenes/Alimentacion.png" alt="Plan de alimentación saludable">
+          </div>
+          <span class="posterLine top"></span>
+          <span class="posterLine bottom"></span>
+        </div>
+
+        <div class="reikiText">
+          <h4>Plan de alimentación saludable</h4>
+
+          <p class="lead">
+            Orden simple para comer mejor: <strong>porciones, ideas y estructura semanal</strong>.
+            Sin extremos, sin culpas.
+          </p>
+
+          <p>
+            Armamos una guía práctica para que puedas sostener hábitos reales: organización,
+            compras, opciones y combinaciones que se adapten a tu rutina.
+          </p>
+
+          <blockquote>
+            “Comer mejor no es perfecto: es sostenible.”
+          </blockquote>
+
+          <div class="reikiDivider"></div>
+
+          <div class="detailsStack">
+            <details class="sessionAcc">
+              <summary>✅ ¿Qué incluye? <span>guía + orden</span></summary>
+              <div class="sessionAcc__body">
+                <p>Estructura semanal (ideas de comidas + variedad).</p>
+                <p>Porciones orientativas y combinaciones posibles.</p>
+                <p>Tips de organización: compras, meal prep y hábitos.</p>
+              </div>
+            </details>
+
+            <details class="sessionAcc">
+              <summary>🎯 Enfoque <span>realista</span></summary>
+              <div class="sessionAcc__body">
+                <p>Sin dietas rígidas. Buscamos equilibrio y constancia.</p>
+                <p>Adaptado a tus horarios, preferencias y contexto.</p>
+              </div>
+            </details>
+          </div>
+
+          <p class="nutri-note">
+            *Este plan es una guía general de hábitos y organización.
+            <strong>No reemplaza</strong> una consulta con nutricionista matriculada.
+          </p>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- TAB 2 -->
+    <article id="nutri-uno" class="nutri-tab-content">
+      <div class="subGrid">
+
+        <div class="photoFrame poster">
+          <img class="posterBg" src="assets/Imagenes/Acompañamiento.png" alt="" aria-hidden="true">
+          <div class="posterMain">
+            <img src="assets/Imagenes/Acompañamiento.png" alt="Acompañamiento 1:1 en hábitos">
+          </div>
+          <span class="posterLine top"></span>
+          <span class="posterLine bottom"></span>
+        </div>
+
+        <div class="reikiText">
+          <h4>Acompañamiento 1:1</h4>
+
+          <p class="lead">
+            Un espacio para <strong>ordenar hábitos</strong>, sostener constancia y mejorar tu relación con la comida,
+            con seguimiento y motivación.
+          </p>
+
+          <p>
+            Te acompaño con herramientas prácticas (organización, registro, rutina, planificación simple).
+            Si hay una necesidad clínica o específica, siempre lo trabajamos con una nutricionista profesional.
+          </p>
+
+          <blockquote>
+            “Acompañar es sostenerte mientras construís hábitos.”
+          </blockquote>
+
+          <div class="reikiDivider"></div>
+
+          <div class="detailsStack">
+            <details class="sessionAcc">
+              <summary>📌 ¿Qué trabajamos? <span>hábitos</span></summary>
+              <div class="sessionAcc__body">
+                <p>Rutinas de comida + horarios + organización semanal.</p>
+                <p>Ideas simples para mejorar calidad sin complicarte.</p>
+                <p>Registro y ajustes según tu energía/semana.</p>
+              </div>
+            </details>
+
+            <details class="sessionAcc">
+              <summary>⚠️ Aclaración importante <span>transparencia</span></summary>
+              <div class="sessionAcc__body">
+                <p>
+                  Actualmente soy <strong>estudiante de nutrición</strong>.
+                  Este acompañamiento es <strong>solo de hábitos y organización</strong>.
+                </p>
+                <p>
+                  <strong>No realizo diagnósticos</strong>, ni indico tratamientos, dietas clínicas,
+                  ni reemplazo la consulta con nutricionista matriculada.
+                </p>
+              </div>
+            </details>
+          </div>
+
+          <p class="nutri-note">
+            *Si necesitás un plan clínico o tratamiento específico, podemos articularlo con una nutricionista matriculada.
+          </p>
+        </div>
+
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- PLANES FITRA -->
+<section class="sectionCard seccion animar" id="planes-fitra">
+  <div class="sectionCard__head">
+    <h3>Planes FITRA</h3>
+    <p>Propuestas integrales para acompañarte según tu momento y tu proceso.</p>
+  </div>
+
+  <div class="planesWrap">
+
+    <!-- CARD 1: SIMPLE -->
+    <article class="planHeroCard">
+      <div class="planHeroMedia">
+        <div class="photoFrame poster">
+          <img class="posterBg" src="assets/Imagenes/plan-simple.jfif" alt="" aria-hidden="true">
+          <div class="posterMain">
+            <img src="assets/Imagenes/plan-simple.jfif" alt="Plan FITRA Simple">
+          </div>
+          <span class="posterLine top"></span>
+          <span class="posterLine bottom"></span>
+        </div>
+      </div>
+
+      <div class="planHeroText">
+        <h4>✨ Plan FITRA Simple</h4>
+
+        <p class="lead">
+          Ideal para mejorar tu energía, movimiento y constancia y construir un hábito saludable.
+        </p>
+
+        <ul class="check">
+          <li>Entrenamiento personalizado (gym u hogar)</li>
+          <li>Seguimiento semanal</li>
+        </ul>
+
+        <div class="planMeta">
+          <span class="pill">Presencial u online</span>
+          <a class="btn primary" href="#agenda" data-plan="Plan FITRA Simple">Quiero este plan</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 2: ESENCIAL + TOTAL -->
+    <article class="planHeroCard featured">
+      <div class="planHeroMedia">
+        <div class="photoFrame poster">
+          <img class="posterBg" src="assets/Imagenes/plan-total.jfif" alt="" aria-hidden="true">
+          <div class="posterMain">
+            <img src="assets/Imagenes/plan-total.jfif" alt="Planes FITRA Esencial y Total">
+          </div>
+          <span class="posterLine top"></span>
+          <span class="posterLine bottom"></span>
+        </div>
+      </div>
+
+      <div class="planHeroText">
+        <h4>✨ Planes Integrales FITRA</h4>
+
+        <div class="planMiniGrid">
+          <div class="planMini">
+            <h5>Plan FITRA Esencial</h5>
+            <ul class="check">
+              <li>Entrenamiento personalizado (gym u hogar)</li>
+              <li>Seguimiento semanal</li>
+              <li>Terapia holística</li>
+            </ul>
+          </div>
+
+          <div class="planMini">
+            <h5>Plan FITRA Total</h5>
+            <ul class="check">
+              <li>Entrenamiento personalizado (gym u hogar)</li>
+              <li>Seguimiento semanal</li>
+              <li>Terapia holística</li>
+              <li>Plan de alimentación saludable</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="planMeta">
+          <span class="pill">Presencial u online</span>
+          <a class="btn primary" href="#agenda" data-plan="Planes Integrales (Esencial / Total)">
+            Quiero info de estos planes
+          </a>
+        </div>
+
+        <p class="tinyNote">
+          * El acompañamiento de alimentación es orientativo y no reemplaza consulta con nutricionista.
+        </p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+    <!-- AGENDA -->
+    <section class="sectionCard seccion animar" id="agenda">
+        <div class="sectionCard__head">
+            <h3>Agenda tu sesión</h3>
+            <p>Elegí el área y contame qué necesitás.</p>
+        </div>
+
+        <form class="form" id="formAgenda">
+            <div class="form__row">
+                <label>Nombre
+                    <input type="text" id="nombre" placeholder="Tu nombre" required />
+                </label>
+                <label>WhatsApp / Email
+                    <input type="text" id="contactoInput" placeholder="Tu contacto" required />
+                </label>
+            </div>
+
+            <div class="form__row">
+                <label>Área
+                    <select id="area">
+                        <option value="Terapias Holísticas">Terapias Holísticas</option>
+                        <option value="Fitness">Fitness</option>
+                        <option value="Nutrición">Nutrición</option>
+                        <option value="Integral (combo)">Integral (combo)</option>
+                    </select>
+                </label>
+                <label>Preferencia
+                    <select id="modalidad">
+                        <option value="Online">Online</option>
+                        <option value="Presencial">Presencial</option>
+                        <option value="Me es indistinto">Me es indistinto</option>
+                    </select>
+                </label>
+            </div>
+
+            <label>Contame en qué te gustaría trabajar
+                <textarea id="mensaje" rows="4" placeholder="Ej: estrés, energía baja, hábitos, calma..."></textarea>
+            </label>
+
+            <div class="form__actions">
+                <button type="submit" class="btn primary">Enviar solicitud</button>
+                <button type="button" class="btn ghost" id="btnLimpiar">Limpiar</button>
+            </div>
+
+            <p class="form__note">* Abre WhatsApp con el mensaje listo.</p>
+        </form>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="sectionCard seccion animar" id="contacto">
+        <div class="sectionCard__head">
+            <h3>Contacto</h3>
+        </div>
+
+        <div class="contactGrid">
+            <div class="glass">
+  <h4>Canales</h4>
+
+  <div class="contactLinks">
+  <a
+  href="https://wa.me/5491164433356?text=Hola%20Iari!%20Te%20escribo%20desde%20la%20web%20Movimiento%20Fitra.%20Quiero%20recibir%20información%20y%20coordinar%20una%20sesión.%20Gracias!"
+  target="_blank"
+  rel="noopener"
+  class="contactBtn"
+>
+  💬 WhatsApp
+  <span>Escribime directo</span>
+</a>
+
+
+    <a
+      href="https://www.instagram.com/movimiento.fitra/"
+      target="_blank"
+      rel="noopener"
+      class="contactBtn instagram"
+    >
+      📷 Instagram
+      <span>@movimientofitra</span>
+    </a>
+  </div>
+
+  <a class="btn ghost" href="#agenda">Ir a Agenda</a>
+</div>
+
+
+            <div class="glass">
+                <h4>Ubicación</h4>
+                <div class="mapFake">
+                    <span>📍 Saenz Peña / Buenos Aires, Argentina</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Movimiento Fitra • Cuerpo, Energía y Presencia</p>
+    </footer>
+
+    </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
