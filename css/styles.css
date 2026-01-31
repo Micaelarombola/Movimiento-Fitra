@@ -888,3 +888,53 @@ select:focus{
   .planHeroCard{ grid-template-columns: 1fr; }
   .planMiniGrid{ grid-template-columns: 1fr; }
 }
+/* =========================
+   TESTIMONIOS (FITRA)
+========================= */
+/* =========================
+   TESTIMONIOS IMÁGENES
+========================= */
+.testiImg{
+  margin-top: 1rem;
+}
+
+.testiImg__viewport{
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.testiImg__track{
+  display: flex;
+  gap: 1rem;
+  transition: transform .6s ease;
+}
+
+.testiImg__item{
+  flex: 0 0 85%;
+  max-width: 85%;
+  display: flex;
+  justify-content: center;
+}
+
+.testiImg__item img{
+  width: 100%;
+  max-width: 420px;
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+
+.testiImg__controls{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:.8rem;
+  margin-top: 1rem;
+}
+
+/* Desktop: 2 visibles */
+@media (min-width: 980px){
+  .testiImg__item{
+    flex-basis: 45%;
+    max-width: 45%;
+  }
+}

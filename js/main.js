@@ -77,7 +77,7 @@ function setupReveal() {
 // ====== SCROLLSPY NAV ======
 function setupScrollSpy(){
   const links = document.querySelectorAll(".nav__link");
-const ids = ["inicio","quien-soy","terapias","fitness","nutricion","planes-fitra","agenda","contacto"];
+const ids = ["inicio","quien-soy","terapias","fitness","nutricion","planes-fitra","testimonios","agenda","contacto"];
   const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
 
   if (!links.length || !sections.length) return;
@@ -167,3 +167,60 @@ nutriTabButtons.forEach(btn => {
     setupReveal();
   });
 });
+// ====== TESTIMONIOS SLIDER ======
+// ====== TESTIMONIOS IMÁGENES ======
+const imgTrack = document.getElementById("testiImgTrack");
+const imgPrev = document.getElementById("testiImgPrev");
+const imgNext = document.getElementById("testiImgNext");
+const imgDots = document.getElementById("testiImgDots");
+
+let imgIndex = 0;
+
+function imgItems(){
+  return imgTrack ? Array.from(imgTrack.children) : [];
+}
+
+function imgPerView(){
+  return window.innerWidth >= 980 ? 2 : 1;
+}
+
+function imgMax(){
+  return Math.max(0, imgItems().length - imgPerView());
+}
+
+function imgGo(i){
+  imgIndex = Math.max(0, Math.min(i, imgMax()));
+  const item = imgItems()[0];
+  if (!item) return;
+
+  const gap = 16;
+  const w = item.getBoundingClientRect().width;
+  imgTrack.style.transform = `translateX(${-(w + gap) * imgIndex}px)`;
+
+  updateDots();
+}
+
+function buildDots(){
+  if (!imgDots) return;
+  imgDots.innerHTML = "";
+  for (let i = 0; i <= imgMax(); i++){
+    const d = document.createElement("span");
+    d.className = "testiDot" + (i === imgIndex ? " active" : "");
+    d.addEventListener("click", () => imgGo(i));
+    imgDots.appendChild(d);
+  }
+}
+
+function updateDots(){
+  if (!imgDots) return;
+  [...imgDots.children].forEach((d,i)=>
+    d.classList.toggle("active", i === imgIndex)
+  );
+}
+
+imgPrev?.addEventListener("click", ()=>imgGo(imgIndex - 1));
+imgNext?.addEventListener("click", ()=>imgGo(imgIndex + 1));
+window.addEventListener("resize", ()=>{ buildDots(); imgGo(imgIndex); });
+
+buildDots();
+imgGo(0);
